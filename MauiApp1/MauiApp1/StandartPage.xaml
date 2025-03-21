@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.StandartPage"
+             Title="Standart Hesap Makinesi">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+        <Entry x:Name="Display" FontSize="30" IsReadOnly="True" Text="{Binding DisplayText}" HorizontalOptions="FillAndExpand" Grid.Row="0" />
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*,*,*">
+            <Button Text="%" Grid.Row="0" Grid.Column="0" Command="{Binding PercentCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="CE" Grid.Row="0" Grid.Column="1" Command="{Binding ClearEntryCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="C" Grid.Row="0" Grid.Column="2" Command="{Binding ClearCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="⌫" Grid.Row="0" Grid.Column="3" Command="{Binding BackspaceCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+
+            <Button Text="1/x" Grid.Row="1" Grid.Column="0" Command="{Binding ReciprocalCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="x²" Grid.Row="1" Grid.Column="1" Command="{Binding SquareCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="√x" Grid.Row="1" Grid.Column="2" Command="{Binding SquareRootCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="/" Grid.Row="1" Grid.Column="3" Command="{Binding OperationCommand}" CommandParameter="/" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+
+            <Button Text="7" Grid.Row="2" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="7" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="8" Grid.Row="2" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="8" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="9" Grid.Row="2" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="9" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="*" Grid.Row="2" Grid.Column="3" Command="{Binding OperationCommand}" CommandParameter="*" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+
+            <Button Text="4" Grid.Row="3" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="4" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="5" Grid.Row="3" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="5" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="6" Grid.Row="3" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="6" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="-" Grid.Row="3" Grid.Column="3" Command="{Binding OperationCommand}" CommandParameter="-" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+
+            <Button Text="1" Grid.Row="4" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="1" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="2" Grid.Row="4" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="2" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="3" Grid.Row="4" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="3" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="+" Grid.Row="4" Grid.Column="3" Command="{Binding OperationCommand}" CommandParameter="+" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+
+            <Button Text="+/-" Grid.Row="5" Grid.Column="0" Command="{Binding NegateCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="0" Grid.Row="5" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="0" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="," Grid.Row="5" Grid.Column="2" Command="{Binding DecimalCommand}" BackgroundColor="Plum" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+            <Button Text="=" Grid.Row="5" Grid.Column="3" Command="{Binding EqualsCommand}" BackgroundColor="WhiteSmoke" TextColor="Black" FontSize="20" Margin="2" CornerRadius="2" />
+        </Grid>
+    </Grid>
+</ContentPage>
